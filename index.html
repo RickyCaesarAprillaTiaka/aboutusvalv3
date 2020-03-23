@@ -1,503 +1,212 @@
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title></title>
-      <!-- asset -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
-      <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
-      <!-- asset end -->
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Us</title>
 
-  <body>
-      <!-- Custom CSS -->
-      <style media="screen">
-          body {
-              font-weight: 500;
-          }
+    <!-- Asset -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-          .carousel .indicators .indicator-item {
-              background-color: rgb(119, 119, 119);
-          }
+    <link rel="stylesheet" href="node_modules/materialize.css">
+    <!-- Asset -->
+</head>
 
-          .carousel .indicators .indicator-item.active {
-              background-color: rgb(0, 0, 0);
-          }
+<body style="background-image: linear-gradient(#5df061, #3621b9) ; color: white;">
+    <nav style="height:0; box-shadow: 0 0 0 0;">
+        <a href="#" data-target="mobile-demo" style="position: fixed; right: 0;" class="sidenav-trigger"><i
+                class="material-icons">menu</i></a>
+    </nav>
+    <ul class="sidenav" style=" width: 50%; text-align: center;padding-top: 100px;" id="mobile-demo">
+        <li><a><img src="node_modules/rdev.svg" alt="" height="100%"></a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#myproject">My Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <style>
+        #sideky {
+            background-color: transparent;
+            position: fixed;
+            text-align: center;
+            width: 300px;
+            right: 0;
+            top: 0;
+            margin: 0;
+            padding: 90px;
+            height: 100%;
+            height: calc(100% + 60px);
+            height: -moz-calc(100%);
+            padding-bottom: 60px;
+            z-index: 999;
+            overflow-y: auto;
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+        #sideky li{
+            border-radius: 15px;
+            background-color: rgba(128, 128, 128, 0.493);
+            margin-top: 20px;
+            padding: 5px;
+        }
+        #sideky li a{
+            color: white;
+            font-size: large;
+            transition: linear 0.5s;
+        }
+        #sideky li a.active{
+            color: #5df061;
+            font-size: large;
+            transition: linear 0.5s;
+        }
+        #sideky li a:hover{
+            color: #5df061;
+        }
 
-          ::-webkit-scrollbar {
-              width: 10px;
-          }
-
-          ::-webkit-scrollbar-track {
-              background: #f1f1f1;
-          }
-
-          ::-webkit-scrollbar-thumb {
-              background: #73b9f2;
-          }
-
-          ::-webkit-scrollbar-thumb:hover {
-              background: #7dbff4;
-          }
-
-          @media screen and (min-width: 0px) and (max-width: 740px) {
-              #hider {
-                  display: none;
-              }
-          }
-
-          .waves-effect.waves-blue-lighten .waves-ripple {
-              background-color: #90CAF9;
-          }
-
-          .navbar-fixed a.active {
-              background-color: white;
-              color: #90CAF9;
-          }
-      </style>
-      <!-- Costum CSS end -->
-
-      <!-- navbar -->
-      <div class="navbar-fixed">
-          <nav>
-              <div class="nav-wrapper blue lighten-3">
-                  <font class="brand-logo center">About Us</font>
-                  <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                  <ul class="left hide-on-med-and-down">
-                      <li><a href="#Profile">Profile</a></li>
-                      <li><a href="#Project">Project</a></li>
-                      <li><a href="#Contact">Contact</a></li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-      <!-- navbar end -->
-
-      <!-- sidebar -->
-      <ul class="sidenav" id="mobile">
-          <li><a href="#Profile">Profile</a></li>
-          <li><a href="#Project">Project</a></li>
-          <li><a href="#Contact">Contact</a></li>
-      </ul>
-      <!-- sidebar end -->
-
-      <div class="parallax-container" style="height:92vh;">
-          <div class="parallax"><img src="img/TeamMada.jpg" alt="asdsa"></div>
-          <div data-aos="fade-down" data-aos-duration="1000">
-              <div class="caption center-align" style="padding:15% 0 0 0;">
-                  <h3 class="grey-text text-lighten-3">Ora Ngoding, Ora Smile</h3>
-                  <h5 class="light grey-text text-lighten-3">- Valv3.exe -</h5>
-              </div>
-          </div>
-
-      </div>
-      <div id="Profile" class="section scrollspy white">
-          <div class="z-depth-2 container" style="border-radius: 15px; padding:10px;">
-              <div class="row">
-                  <div class="col s12 m12 l5">
-                      <div class="row center">
-                          <div data-aos="fade-down">
-                              <div class="col s12">
-                                  <img src="img/Ricky Caesar Aprilla Tiaka.jpg"
-                                      style="border-radius: 25px; width:50%;">
-                              </div>
-                              <div class="col s12">
-                                  <h5>Ricky Caesar Aprilla Tiaka</h5>
-                                  <p>Lahir di Samarinda, 06 April 2002. Umur 17 Tahun. Lulusan Sekolah SMK Negeri 7
-                                      Samarinda.
-                                      Hobi Programming dan Foto Tanaman. Aplikasi Favorit adalah Atom dan GitKraken.</p>
-                              </div>
+        #logo {
+            padding: 5px;
+            border-radius: 50%;
+            background-color: rgba(128, 128, 128, 0.493);
+        }
+        
+    </style>
+    <ul id="sideky" class="right hide-on-med-and-down"><a><img id="logo" width="100%" src="node_modules/rdev.svg" alt=""></a>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#myproject">My Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="row scrollspy" id="home" style=" margin: 0;">
+        <div class="col s7 center" style="padding: 20px; margin-top: 6%; margin-bottom: 4%;">
+            <h3>Portfolio</h3>
+            <h5>Ricky Caesar Aprilla Tiaka</h5>
+            <h6>Full Stack Web Developer</h6>
+        </div>
+        <div class="col s5" style="padding: 0; margin: 0;">
+            <div class="parallax-container z-depth-5" style="height:50vh; margin: 20px; border-radius: 20px;">
+                <div class="parallax"><img src="node_modules/1.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="row scrollspy" id="aboutme" style=" margin: 0;">
+        <div class="col s5" style="padding: 0; margin: 0;">
+            <div class="parallax-container z-depth-5" style="height:50vh; margin: 20px; border-radius: 20px;">
+                <div class="parallax"><img src="node_modules/6.jpg"></div>
+            </div>
+        </div>
+        <div class="col s7">
+            <h4>About Me</h4>
+            <hr style="border: 0.9px white solid;">
+            <div style="">
+                <p>I am full stack web developer, started learning about programming in 2016.</p>
+                <p>My hobby is programming and gaming, my favorite programming language is PHP and Ruby. My favorite Framework is Laravel and Ruby on Rails.</p>
+                <p>For Frontend Framework i use Vue.js.</p>
+                <p>For Database i use MySQL and PostgreSQL</p>
+            </div>
+        </div>
+    </div>
+    <div class="row scrollspy" id="myproject" style=" margin: 0;">
+        <div class="col s7 right-align">
+            <h4>My Project</h4>
+            <hr style="border: 0.9px white solid;">
+                <div class="row">
+                    <div class="col l6 m6 s12">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="node_modules/proj1.png">
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator grey-text text-darken-4">News Website DDPI<i class="material-icons right">more_vert</i></span>
+                              <p><a href="http://ddpi.kaltimprov.go.id/" target="_blank">See website</a></p>
+                            </div>
+                            <div class="card-reveal">
+                              <span class="card-title grey-text text-darken-4">News website DDPI<i class="material-icons right">close</i></span>
+                              <p class="grey-text text-darken-4">Build with Laravel, bootstrap, JQuery.</p>
+                              <p class="grey-text text-darken-4">Template Wrappixel</p>
+                            </div>
                           </div>
-                          <div class="col s12">
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-css3-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">CSS</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">100%</p>
-                                  </div>
-                                  <div class="progress blue lighten-3">
-                                      <div class="determinate blue accent-3" style="width: 100%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-php-logo-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">PHP</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">98%</p>
-                                  </div>
-                                  <div class="progress indigo lighten-4">
-                                      <div class="determinate indigo lighten-2" style="width: 98%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-html-5-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">HTML</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">100%</p>
-                                  </div>
-                                  <div class="progress orange lighten-3">
-                                      <div class="determinate orange darken-3" style="width: 100%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-laravel-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">Laravel</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">80%</p>
-                                  </div>
-                                  <div class="progress deep-orange lighten-3">
-                                      <div class="determinate deep-orange accent-3" style="width: 80%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-bootstrap-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">Bootstrap</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">60%</p>
-                                  </div>
-                                  <div class="progress deep-purple lighten-3">
-                                      <div class="determinate deep-purple darken-2" style="width: 60%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" width="51"
-                                          src="img/code/icons8-materialize-logo-96.png"
-                                          style="margin-right:8px;">
-                                      <p class="left">Materialize</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">50%</p>
-                                  </div>
-                                  <div class="progress red lighten-4">
-                                      <div class="determinate red lighten-3" style="width: 50%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s12 m12 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" width="51"
-                                          src="img/code/icons8-design-96.png" style="margin-right:8px;">
-                                      <p>Design Graphic</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">60%</p>
-                                  </div>
-                                  <div class="progress red cyan lighten-4">
-                                      <div class="determinate cyan accent-3" style="width: 60%;"></div>
-                                  </div>
-                              </div>
+                    </div>
+                    <div class="col l6 m6 s12">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="node_modules/proj2.png">
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator grey-text text-darken-4">Kawalborneo website<i class="material-icons right">more_vert</i></span>
+                              <p><a class="grey-text" >Coming soon</a></p>
+                            </div>
+                            <div class="card-reveal">
+                              <span class="card-title grey-text text-darken-4">Profile website Kawalborneo<i class="material-icons right">close</i></span>
+                              <p class="grey-text text-darken-4">Build with Laravel, bootstrap, JQuery.</p>
+                              <p class="grey-text text-darken-4">Template AdminLTE</p>
+                            </div>
                           </div>
-                      </div>
-                  </div>
-                  <div class="col s2"></div>
-                  <div class="col s12 m12 l5">
-                      <div class="row center">
-                          <div data-aos="fade-down">
-                              <div class="col s12">
-                                  <img src="img/Ricko Caesar Aprilla Tiaka.jpg"
-                                      style="border-radius: 25px; width:50%;">
-                              </div>
-                              <div class="col s12">
-                                  <h5>Ricko Caesar Aprilla Tiaka</h5>
-                                  <p>Lahir di Samarinda, 06 April 2002. Umur 17 Tahun. Lulusan Sekolah SMK Negeri 7
-                                      Samarinda.
-                                      Hobi Design, Programming dan Olahraga. Aplikasi Favorit adalah InkScapel, GIMP dan
-                                      DragonBones.</p>
-                              </div>
-                          </div>
-
-                          <div class="col s12">
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-css3-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">CSS</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">100%</p>
-                                  </div>
-                                  <div class="progress blue lighten-3">
-                                      <div class="determinate blue accent-3" style="width: 100%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-php-logo-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">PHP</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">50%</p>
-                                  </div>
-                                  <div class="progress indigo lighten-4">
-                                      <div class="determinate indigo lighten-2" style="width: 50%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-html-5-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">HTML</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">100%</p>
-                                  </div>
-                                  <div class="progress orange lighten-3">
-                                      <div class="determinate orange darken-3" style="width: 100%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" src="img/code/icons8-flutter-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">Flutter</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">50%</p>
-                                  </div>
-                                  <div class="progress blue lighten-4">
-                                      <div class="determinate blue lighten-2" style="width: 50%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left"
-                                          src="img/code/icons8-visual-studio-96.png"
-                                          style="margin-right:8px; width:30%;">
-                                      <p class="left">Visual Basic</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">100%</p>
-                                  </div>
-                                  <div class="progress deep-purple lighten-3">
-                                      <div class="determinate deep-purple darken-2" style="width: 100%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s6 m6 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" width="51"
-                                          src="img/code/icons8-python-96.png" style="margin-right:8px;">
-                                      <p class="left">Python</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">50%</p>
-                                  </div>
-                                  <div class="progress blue lighten-3">
-                                      <div class="determinate blue darken-2" style="width: 50%;"></div>
-                                  </div>
-                              </div>
-                              <div data-aos="fade-right" class="col s12 m12 l12">
-                                  <div class="col s6">
-                                      <img id="hider" class="left" width="51"
-                                          src="img/code/icons8-design-96.png" style="margin-right:8px;">
-                                      <p>Design Graphic</p>
-                                  </div>
-                                  <div class="col s6">
-                                      <p class="right">100%</p>
-                                  </div>
-                                  <div class="progress red cyan lighten-4">
-                                      <div class="determinate cyan accent-3" style="width: 100%;"></div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="parallax-container">
-          <div id="Project" class="carousel scrollspy carousel-slider center container"
-              style="width:70%; margin-top:50px;">
-              <div class="carousel-fixed-item center">
-              </div>
-              <div class="carousel-item white-text"
-                  style="background-image:url(img/proj2.png); background-size: cover;" href="#one!">
-                  <h2 style="background-color:rgba(148, 148, 148, 0.26); color:white;">WebProfile</h2>
-                  <a class="btn waves-effect blue lighten-3 white-text darken-text-2"
-                      style="margin-top:200px;">Lihat</a>
-              </div>
-              <div class="carousel-item white-text"
-                  style="background-image:url(img/design1.jpg); background-size: cover;" href="#two!">
-                  <h2 style="background-color:rgba(65, 65, 65, 0.26);">Pamflet #2</h2>
-                  <a href="https://www.instagram.com/p/B0Gy9WllLma/" target="_blank"
-                      class="btn waves-effect blue lighten-3 white-text darken-text-2"
-                      style="margin-top:200px;">Lihat</a>
-              </div>
-              <div class="carousel-item white-text"
-                  style="background-image:url(img/design2.jpg); background-size: cover;" href="#three!">
-                  <h2 style="background-color:rgba(65, 65, 65, 0.26);">Pamflet #1</h2>
-                  <a href="https://www.instagram.com/p/Bz-7oV7lzo4/" target="_blank"
-                      class="btn waves-effect blue lighten-3 white-text darken-text-2"
-                      style="margin-top:200px;">Lihat</a>
-              </div>
-          </div>
-          <div class="parallax"><img src="img/2775.jpg" alt="asdsa"></div>
-      </div>
-      <div id="Contact" class="section scrollspy white">
-          <div class="row container">
-              <div style="width:100%;">
-                  <div class="col s12 ">
-                      <h2 class="center">Contact</h2>
-                  </div>
-                  <div class="col s12 center" style="border-radius:15px; color:#000;">
-                      <div class="col s12 m12 l4 center waves-effect waves-blue-lighten"
-                          style="padding:5px 0 0 0; border-radius:15px;">
-                          <i class="medium material-icons">email</i>
-                          <p style="margin:0;">rickycaesar6402@gmail.com</p>
-                      </div>
-                      <div class="col s12 m12 l4 center waves-effect waves-blue-lighten"
-                          style="padding:5px 0 0 0; border-radius:15px;">
-                          <i class="medium material-icons">local_phone</i>
-                          <p style="margin:0;">+6285751664898</p>
-                      </div>
-                      <a href="https://t.me/Valv3" style="color:#000;">
-
-                          <div class="col s12 m12 l4 center waves-effect waves-blue-lighten"
-                              style="padding:5px 0 0 0; border-radius:15px;">
-                              <i class="medium material-icons">contacts</i>
-                              <p style="margin:0;">Ricky Caesar Aprilla Tiaka</p>
-                          </div>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="parallax-container" style="height: 30vh;">
-          <div class="parallax"><img src="img/Project.png" alt="asdsa"></div>
-      </div>
-  </body>
-  <!-- FloatingButton
-  <div class="fixed-action-btn">
-      <a class="btn-floating btn-large modal-trigger blue dark-3" href="#modal1">
-          <i class="large material-icons">account_circle</i>
-      </a>
-  </div>
-  Modal
-  <div id="modal1" class="modal">
-      <div class="modal-content">
-          <div class="container">
-              <h4 class="center">Login</h4>
-              <div class="row">
-                  <div class="input-field col s12 m12 l12">
-                      <i class="material-icons prefix">account_box</i>
-                      <input type="text" name="" id="username" class="validate">
-                      <label for="username">Username</label>
-                  </div>
-                  <div class="input-field col s12 m12 l12">
-                      <i class="material-icons prefix">vpn_key</i>
-                      <input type="password" name="" id="password" class="validate">
-                      <label for="password">Password</label>
-                  </div>
-                  <div class="divider col s12 m12 l12"></div>
-                  <div class="input-field col s6 m6 l6">
-                      <i>Lupa Password? <a href="#">Klik disini</a></i>
-                  </div>
-                  <div class="input-field col s6 m6 l6">
-                      <a class="right waves-effect waves-light btn"><i class="right material-icons">input</i>Login</a>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="modal-footer">
-          <a class="modal-close waves-effect waves-red btn-flat">Batal</a>
-      </div>
-  </div>
-  Modal end
-  FloatingButton end -->
-  <footer class="page-footer blue lighten-3">
-      <div class="container">
+                    </div>
+                </div>
+                
+        </div>
+        <div class="col s5" style="padding: 0; margin: 0;">
+            <div class="parallax-container z-depth-5" style="height:50vh; margin: 20px; border-radius: 20px;">
+                <div class="parallax"><img src="node_modules/4.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row scrollspy" id="contact" style=" margin: 0;">
+        <div class="col s5" style="padding: 0; margin: 0;">
+            <div class="parallax-container z-depth-5" style="height:50vh; margin: 20px; border-radius: 20px;">
+                <div class="parallax"><img src="node_modules/5.jpg"></div>
+            </div>
+        </div>
+        <div class="col s7">
+            <h4>Contact</h4>
+            <hr style="border: 0.5px white solid;">
+            <div style="width:60%;">
+                <p class="row"><i class="small material-icons col s12 l1 m1">email</i><span class="col s12 l11 m11">rickycaesar6402@gmail.com</span></p>
+                <p style="display:flex;"><i style="margin-right: 5px;" class="small material-icons">phone</i>+6285751664898</p>
+                <p style="display:flex;"><i style="margin-right: 5px;" class="small material-icons">contacts</i><a target="_blank" class="link grey-text text-lighten-4" href="https://t.me/Valv3">Ricky Caesar Aprilla Tiaka</a></p>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer blue-grey darken-4">
+        <div class="container">
           <div class="row">
-              <div class="col l6 s12">
-                  <h5 class="white-text">About Us</h5>
-                  <p class="grey-text text-lighten-4">Halaman ini berisi tentang informasi kami seperti keahlian, hobi
-                      dll.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Links</h5>
-                  <ul>
-                      <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/ricky_tiaka/">Ricky Caesar
-                              Aprilla Tiaka</a></li>
-                      <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/ricko.tiaka/">Ricko Caesar
-                              Aprilla Tiaka</a></li>
-                  </ul>
-              </div>
+            <div class="col l6 s12">
+              <h5 class="white-text">About this website</h5>
+              <p class="grey-text text-lighten-4">This website is about my information.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="Ricky Caesar Aprilla Tiaka">My Instagram</a></li>
+              </ul>
+            </div>
           </div>
-      </div>
-      <div class="footer-copyright">
+        </div>
+        <div class="footer-copyright">
           <div class="container">
-              © 2019 Copyright Text
+          Created By <a href="https://www.instagram.com/ricky_tiaka/">Ricky Caesar Aprilla Tiaka</a>
           </div>
-      </div>
-  </footer>
+        </div>
+      </footer>
+</body>
 
-  </html>
-  <!-- Asset Javascript -->
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
-  <script type="text/javascript" src="bower_components/aos/dist/aos.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function () {
-          //AOS
-          AOS.init();
-          //AOS end
-          // Sidenav
-          $('.sidenav').sidenav();
-          // Sidenav end
+</html>
 
-          // Scrollspy
-          $('.scrollspy').scrollSpy({
-              activeClass: 'active'
-          });
-          // Scrollspy end
+<!-- Asset -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/materialize-css/dist/js/materialize.js"></script>
+<!-- Asset -->
 
-          // Parallax
-          $('.parallax').parallax();
-          // Parallax end
-
-          // Carousel
-          $('.carousel').carousel({
-              fullWidth: true,
-              indicators: true
-          });
-
-          // nextslide time Carousel
-          setInterval(function () {
-              $('.carousel').carousel('next');
-          }, 5000);
-          // nextslide time Carousel end
-
-          // Carousel end
-
-          // FloatingButton
-          $('.fixed-action-btn').floatingActionButton();
-          // FloatingButton end
-
-          // Modal
-          $('.modal').modal();
-          // Modal end
-          $('.slider').slider({
-              indicators: false,
-              duration: 1000
-          });
-      });
-  </script>
-  <!-- Asset Javascript end -->
+<script>
+    $(document).ready(function () {
+        $('.sidenav').sidenav({
+            edge: 'right'
+        });
+        $('.parallax').parallax();
+        $('.scrollspy').scrollSpy({
+            activeClass: 'active'
+        });
+    });
+</script>
